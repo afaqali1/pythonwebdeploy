@@ -21,6 +21,6 @@ jobs:
       # Install pip and pytest
       - name: Install pytest
         run: |
-          pip install pytest
+          pip install python -m pytest
       - name: Test with pytest
-        run: pytest tests.py --doctest-modules --junitxml=junit/test-results-${{ matrix.python-version }}.xml
+        run: python -m pytest tests.py --doctest-modules --junitxml=junit/test-results-${{ matrix.python-version }}.xml
